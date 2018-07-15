@@ -1,2 +1,2 @@
-# bcuiot.github.io
-Website for the BCU Internet of Things initiative.
+![BCU Logo](https://raw.githubusercontent.com/BCUIoT/assets/master/website/img/bcu-logo-small.png)
+# BCU Internet of Things Initiative
