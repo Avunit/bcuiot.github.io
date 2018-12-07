@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html class="notie no-js" lang="en">
     <head>
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script
+			  src="/assets/js/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="></script>
+		
 
       <meta http-equiv="x-ua-compatible" content="IE=Edge" />
       <meta charset="utf-8" />
@@ -11,92 +14,94 @@
       <meta name="HandheldFriendly" content="True" />
       <meta name="MobileOptimized" content="320" />
 
-      <link href="//cdn1.bcu.ac.uk/bcu-cdl/v1.4.1/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-      <link href="//cdn1.bcu.ac.uk/bcu-cdl/v1.4.1/favicons/apple-touch-icon.png" rel="apple-touch-icon" />
-      <link href="//cdn1.bcu.ac.uk/bcu-cdl/v1.4.1/favicons/apple-touch-icon-76.png" rel="apple-touch-icon" sizes="76x76" />
-      <link href="//cdn1.bcu.ac.uk/bcu-cdl/v1.4.1/favicons/apple-touch-icon-120.png" rel="apple-touch-icon" sizes="120x120" />
-      <link href="//cdn1.bcu.ac.uk/bcu-cdl/v1.4.1/favicons/apple-touch-icon-152.png" rel="apple-touch-icon" sizes="152x152" />
+      <link href="/assets/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+      <link href="/assets/favicons/apple-touch-icon.png" rel="apple-touch-icon" />
+      <link href="/assets/favicons/apple-touch-icon-76.png" rel="apple-touch-icon" sizes="76x76" />
+      <link href="/assets/favicons/apple-touch-icon-120.png" rel="apple-touch-icon" sizes="120x120" />
+      <link href="/assets/favicons/apple-touch-icon-152.png" rel="apple-touch-icon" sizes="152x152" />
 
-      <!-- BCU CDL Links -->
+      <!-- BCU CDL -->
       <link href="/assets/css/styles.css" rel="stylesheet" />
-      <script type="text/javascript" src="//cdn1.bcu.ac.uk/bcu-cdl/v1.4.1/scripts/cdl.plugins.js"></script>
-      <script type="text/javascript" src="//cdn1.bcu.ac.uk/bcu-cdl/v1.4.1/scripts/cdl.js"></script>
+      <script type="text/javascript" src="/assets/js/cdl.plugins.js"></script>
+      <script type="text/javascript" src="/assets/js/cdl.js"></script>
 
-      <title>Projects :: BCU Internet of Things</title>
-
+      <title>BCU Internet of Things Space</title>
     </head>
-<body>
-  <header class="header-main bg-primary">
-      <div class="page m-page">
-          <div class="bcu-header clear-fix">
-              <div class="left-col">
-                  <a id="aTop"></a>
-                  <a tabindex="1" title="Home Page" href="/" class="block bcu-logo-new"></a>
-                  <div class="off-screen">
-                      <h1>IoT at Birmingham City University</h1>
+    <body>
+      <header class="header-main bg-primary">
+          <div class="page m-page">
+              <div class="bcu-header clear-fix">
+                  <div class="left-col">
+                      <a id="aTop"></a>
+                      <object tabindex="1" title="Home Page" type="image/svg+xml" data="/assets/images/logo.svg">
+                      <div class="primary-font-medium">BIRMINGHAM CITY<br>University</div>
+                      </object>
+                      <div class="off-screen">
+                          <h1>IoT at Birmingham City University</h1>
+                      </div>
+                      <p id="skip-links" class="off-screen">
+                          <a href="#aMainContent" tabindex="2"><span class="bold">Skip to :</span>main content</a> |
+                          <a href="#aMainNav" tabindex="3"><span class="bold">Skip to :</span>main menu</a> |
+                          <a href="#aSectionNav" tabindex="4"><span class="bold">Skip to :</span>section menu</a>
+                      </p>
                   </div>
-                  <p id="skip-links" class="off-screen">
-                      <a href="#aMainContent" tabindex="2"><span class="bold">Skip to :</span>main content</a> |
-                      <a href="#aMainNav" tabindex="3"><span class="bold">Skip to :</span>main menu</a> |
-                      <a href="#aSectionNav" tabindex="4"><span class="bold">Skip to :</span>section menu</a>
-                  </p>
-              </div>
-              <div class="right-col">
-                  <a id="aTop"></a>
-                  <h1 style="color: #ffffff; padding-top: 5%;">Internet of Things</h1>
+                  <div class="right-col">
+                      <a id="aTop"></a>
+                      <h1 style="color: #ffffff; padding-top: 5%;">Internet of Things Space</h1>
+                  </div>
               </div>
           </div>
-      </div>
-  </header>
-  <a id="aMainNav"></a>
-  <nav id="main-navigation" class="main-navigation">
-      <div class="hide-on-desktop header-mobile-buttons">
-          <ul class="base-tabs" role="menubar">
-              <li class="size1of2 left bc7 br-line" role="menuitem">
-                  <a href="javascript:void(0)" class="no-dec header-mobile-buttons_links pvm" id="ToggleNav" title="Open main menu" aria-controls="nav" aria-owns="nav" aria-hidden="false">
-                      <span class="icon-menu delta js-toggle-icon"></span><span class="off-screen">Open menu</span>
-                  </a>
+      </header>
+      <a id="aMainNav"></a>
+      <nav id="main-navigation" class="main-navigation">
+          <div class="hide-on-desktop header-mobile-buttons">
+              <ul class="base-tabs" role="menubar">
+                  <li class="size1of2 left bc7 br-line" role="menuitem">
+                      <a href="javascript:void(0)" class="no-dec header-mobile-buttons_links pvm" id="ToggleNav" title="Open main menu" aria-controls="nav" aria-owns="nav" aria-hidden="false">
+                          <span class="icon-menu delta js-toggle-icon"></span><span class="off-screen">Open menu</span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+
+          <ul id="nav" class="cf nav-collapse nav-collapse nav-collapse-0 closed" role="menu" aria-hidden="true" style="transition: max-height 400ms; position: absolute;">
+              <li class="" role="menuitem">
+                  <a class="main-nav_link j-top-link-touch primary-font " href="/">Home</a>
+              </li>
+              <li class="" role="menuitem">
+                  <a class="main-nav_link j-top-link-touch primary-font " href="/the-team">The Team</a>
+              </li>
+              <li class="" role="menuitem">
+                  <a class="main-nav_link j-top-link-touch primary-font " href="/projects">Projects</a>
+              </li>
+              <li class="" role="menuitem">
+                  <a class="main-nav_link j-top-link-touch primary-font " href="/industry">Partners</a>
               </li>
           </ul>
-      </div>
+      </nav>
 
-      <ul id="nav" class="cf nav-collapse nav-collapse nav-collapse-0 closed" role="menu" aria-hidden="true" style="transition: max-height 400ms; position: absolute;">
-          <li class="" role="menuitem">
-              <a class="main-nav_link j-top-link-touch primary-font " href="/">Home</a>
-          </li>
-          <li class="" role="menuitem">
-              <a class="main-nav_link j-top-link-touch primary-font " href="/the-team">The Team</a>
-          </li>
-          <li class="" role="menuitem">
-              <a class="main-nav_link j-top-link-touch primary-font " href="/projects">Projects</a>
-          </li>
-          <li class="" role="menuitem">
-              <a class="main-nav_link j-top-link-touch primary-font " href="/industry">Partners</a>
-          </li>
-      </ul>
-  </nav>
+      <div class="clear"></div>
+          <div id="main" class="col-row page center mvl">
+              <a id="aMainContent"></a>
 
-  <div class="clear"></div>
-      <div id="main" class="col-row page center mvl">
-          <a id="aMainContent"></a>
+              <div class="panel-info mvm">
+                  <p>This website is still under construction. Thank you for your patience.</p>
+              </div>
 
-          <div class="panel-info mvm">
-              <p>This website is still under construction. Thank you for your patience.</p>
-          </div>
+              <ul id="breadcrumb" class="base-tabs breadcrumb mbl">
+                  <li class="bread-crumb-color">
+                      <a class="home" title="Birmingham City University Home Page" href="/">
+                          <span class="icon-home bread-home" aria-hidden="true"></span>
+                          <span class="off-screen">Birmingham City University Home Page</span>
+                          <span class="icon-right-open-mini inline-block chevron"></span>
+                      </a>
+                  </li>
 
-          <ul id="breadcrumb" class="base-tabs breadcrumb mbl">
-              <li class="bread-crumb-color">
-                  <a class="home" title="Birmingham City University Home Page" href="/">
-                      <span class="icon-home bread-home" aria-hidden="true"></span>
-                      <span class="off-screen">Birmingham City University Home Page</span>
-                      <span class="icon-right-open-mini inline-block chevron"></span>
-                  </a>
-              </li>
+                <li class="bread-crumb-current">
+                    <span class="block current-content">Home</span>
+                </li>
+            </ul>
 
-            <li class="bread-crumb-current">
-                <span class="block current-content">Projects</span>
-            </li>
-        </ul>
 
         <div class="col-row m-page">
             <div class="article pbl right-col size3of4">
