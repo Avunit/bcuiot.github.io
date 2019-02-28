@@ -1,28 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset='utf-8' />
-<title>Display a map</title>
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
-<style>
-body { margin:0; padding:0; }
-#map { position:absolute; top:0; bottom:0; width:100%; }
-</style>
+    <link rel="stylesheet" href="/assets/css/leaflet.css"/>
+    <script src="/assets/js/leaflet.js"></script>
+    <script src="/assets/js/heatmap.js"></script>
+    <script src="/assets/js/leaflet-heatmap.js"></script>
+    <script src="/assets/js/custommap.js"></script>
 </head>
 <body>
- 
-<div id='map'></div>
+
+<div id="mapid" style="height: 500px;"></div>
+
 <script>
-mapboxgl.accessToken = 'changeme';
-const map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/brettnangle/cjqp8umsy02kn2spjkvy3vmfq',
-center: [-1.885797, 52.482772],
-zoom: 17.0
-});
+
+    var testData = {
+        max: 8,
+        data: [{lat: 52.483, lng: -1.885, count: 3}, {lat: 50.75, lng: -1.55, count: 1}]
+    };
+
+    var baseLayer = L.tileLayer(
+        'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' + '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' + 'Data © <a href="https://bcuiot.tech">BCU IoT</a>',
+            maxZoom: 20
+        }
+    );
+
+    var cfg = {
+        // radius should be small ONLY if scaleRadius is true (or small radius is intended)
+        // if scaleRadius is false it will be the constant radius used in pixels
+        "radius": .0002,
+        "maxOpacity": .75,
+        // scales the radius based on map zoom
+        "scaleRadius": true,
+        // if set to false the heatmap uses the global maximum for colorization
+        // if activated: uses the data maximum within the current map boundaries
+        //   (there will always be a red spot with useLocalExtremas true)
+        "useLocalExtrema": true,
+        // which field name in your data represents the latitude - default "lat"
+        latField: 'lat',
+        // which field name in your data represents the longitude - default "lng"
+        lngField: 'lng',
+        // which field name in your data represents the data value - default "value"
+        valueField: 'count'
+    };
+
+    var heatmapLayer = new HeatmapOverlay(cfg);
+
+    var map = new L.Map('mapid', {
+        center: new L.LatLng(52.483, -1.885),
+        zoom: 18,
+        layers: [baseLayer, heatmapLayer]
+    });
+
+    heatmapLayer.setData(testData);
 </script>
- 
+
 </body>
 </html>
