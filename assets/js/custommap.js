@@ -1,6 +1,6 @@
 var testData = {
     max: 8,
-    data: [{lat: 24.6408, lng:46.7728, count: 3},{lat: 50.75, lng:-1.55, count: 1}]
+    data: [{lat: 24.6408, lng:46.7728, count: 2}]
 };
 
 var baseLayer = L.tileLayer(
