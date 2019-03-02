@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../assets/css/leaflet.css"/>
+    <script src="../assets/js/leaflet.js"></script>
+    <script src="../assets/js/leaflet-heat.js"></script>
+    <style>
+    #image-map {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+    </style>
+  </head>
+  <body>
+
+  <div id="image-map"></div>
+
+  <script>
+    var map = L.map('image-map', {
+      minZoom: 1,
+      maxZoom: 4,
+      center: [-75, 175],
+      zoom: 2,
+      crs: L.CRS.Simple,
+    });
+
+    var w = 2456,
+        h = 1344,
+        url = '../assets/images/map.png';
+
+    var southWest = map.unproject([0, h], map.getMaxZoom()-1);
+    var northEast = map.unproject([w, 0], map.getMaxZoom()-1);
+    var bounds = new L.LatLngBounds(southWest, northEast);
+
+    var heat = L.heatLayer([
+      //Lvl 3 recep
+        [-82, 168, 5],
+      //MP Entrance
+        [-99, 161.5, 5],
+      //
+    ], {radius: 10}).addTo(map);
+    L.imageOverlay(url, bounds).addTo(map);
+    map.setMaxBounds(bounds);
+    console.log(bounds);
+  </script>
+
+  </body>
+</html>
